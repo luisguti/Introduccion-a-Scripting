@@ -152,4 +152,30 @@ factor_survey_vector
 levels(factor_survey_vector) <- c("Female","Male")
 factor_survey_vector
 ```
+Summarizing factor
+```{r}
+summary(survey_vector)
+summary(factor_survey_vector)
+
+male <- factor_survey_vector[1]
+male
+female <- factor_survey_vector[2]
+female 
+
+male > female
+
+speed_vector <- c("medium","slow","slow","medium","fast")
+factor_speed_vector <- factor(speed_vector,ordered = TRUE, levels = c("slow","medium","fast"))
+factor_speed_vector
+
+da2 <- factor_speed_vector[2]
+da3 <- factor_speed_vector[1]
+
+da2
+da3
+
+da2 > da3
+
+
+```
 
