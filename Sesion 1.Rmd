@@ -89,6 +89,20 @@ starts_wars_matrix <- matrix(box_office, byrow=TRUE, nrow=3)
 starts_wars_matrix
 ```
 ```{r}
+region <- c("US","non-US")
 
+titles <- c("A new hope","The empire Strikes Back","Return of the Jedi")
+colnames(starts_wars_matrix) <- region
+rownames(starts_wars_matrix) <- titles
 
+starts_wars_matrix
 ```
+RowSum()
+```{r}
+worldwide_vector <- rowSums(starts_wars_matrix)
+worldwide_vector
+
+all_wars_variable <- cbind(starts_wars_matrix, worldwide_vector)
+all_wars_variable
+```
+
