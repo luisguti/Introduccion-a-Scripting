@@ -1,0 +1,75 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+3 + 5
+6 + 10 
+
+5 - 1
+5 * 2
+(5 -2) /2
+2 ^ 5
+28 %% 6
+```
+```{r}
+x <- 10
+y <- 15
+total = x + y
+total
+```
+```{r}
+my_caracter <- "universe"
+my_logical <- FALSE
+my_caracter
+my_logical
+```
+```{r}
+class(my_caracter)
+class(my_logical)
+```
+```{r}
+numeric_vector <- c(1,10,49)
+caracter_vector <- c("Luis","Antonio","Gutierrez")
+boolean_vector <- c(TRUE, FALSE, TRUE)
+
+caracter_vector
+boolean_vector
+```
+Nombrando un Vector
+```{r}
+poker_vector <- c(140,-50,20,-120,240)
+roulette_vector <- c(-24,-50,100,-350,10)
+
+names(poker_vector) <- c("Monday","Tuesday","Wednesday","Thursday","Friday")
+poker_vector
+
+names(roulette_vector) <- c("Monday","Tuesday","Wednesday","Thursday","Friday")
+roulette_vector
+
+total_daily <- poker_vector + roulette_vector
+total_daily
+
+total_poker <- sum(poker_vector)
+total_poker
+
+sum_total <- sum(poker_vector, roulette_vector)
+sum_total
+
+poker_vector
+poker_vector[3]
+poker_vector[c(1,2,3)]
+
+roulette_vector[2:5]
+
+
+```
+Comparando vectores
+```{r}
+total_daily <- poker_vector + roulette_vector
+total_daily
+
+total_poker <- sum(poker_vector)
+total_poker
+ ```
