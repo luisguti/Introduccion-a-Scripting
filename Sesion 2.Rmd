@@ -1,0 +1,16 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Dataframes
+
+```{r}
+mtcars
+
+head(mtcars)
+tail(mtcars)
+
+str(mtcars)
+```
+
