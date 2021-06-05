@@ -72,4 +72,23 @@ total_daily
 
 total_poker <- sum(poker_vector)
 total_poker
- ```
+```
+
+Matrices
+```{r}
+matrix(1:9,byrow=TRUE,nrow=3)
+```
+```{r}
+new_hope <- c(460.998,314.4)
+empire_strike <- c(2980.475,247.900)
+return_jedi <- c(309.306,165.8)
+
+box_office <- c(new_hope, empire_strike, return_jedi)
+
+starts_wars_matrix <- matrix(box_office, byrow=TRUE, nrow=3)
+starts_wars_matrix
+```
+```{r}
+
+
+```
