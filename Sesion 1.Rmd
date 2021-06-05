@@ -104,5 +104,52 @@ worldwide_vector
 
 all_wars_variable <- cbind(starts_wars_matrix, worldwide_vector)
 all_wars_variable
+
+world_cols <- colSums(all_wars_variable)
+world_cols
+
+all_wars_variable <- rbind(starts_wars_matrix,world_cols)
+all_wars_variable
+```
+Selection of matrix elements
+```{r}
+non_us_all <- all_wars_variable[,2]
+non_us_all
+
+non_us_all <- all_wars_variable["A new hope",2]
+non_us_all
+
+non_us_all <- all_wars_variable[1:3,2]
+non_us_all
+
+mean(non_us_all)
+
+```
+Arithmetic with matrices
+```{r}
+us_all <- all_wars_variable[1:3,1]
+us_all <- us_all * 0.12
+us_all
+
+```
+Factors
+```{r}
+sex_vector <- c("Male","Female","Female","Male","Male")
+factor_sex_vector <- factor(sex_vector)
+factor_sex_vector
+
+temperature_vector <- c("High","Low","High","Low","Medium")
+factor_temperature_vector <- factor(temperature_vector, order=TRUE, levels=c("Low","Medium","High"))
+factor_temperature_vector
+```
+```{r}
+
+survey_vector <- c("M","F","F","M","M")
+factor_survey_vector <- factor(survey_vector)
+
+factor_survey_vector
+
+levels(factor_survey_vector) <- c("Female","Male")
+factor_survey_vector
 ```
 
