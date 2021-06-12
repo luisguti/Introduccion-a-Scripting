@@ -72,3 +72,11 @@ names(my_list) <- c("vector","matrix","data frame")
 my_list
 ```
 
+Selecting elements from a list
+```{r}
+
+my_list[[2]][2,2]
+
+
+```
+

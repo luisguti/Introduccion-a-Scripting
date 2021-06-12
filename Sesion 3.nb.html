@@ -215,136 +215,59 @@ pre code {
 
 
 <!-- rnb-text-begin -->
-<p>Dataframes</p>
+<p>Intermediate R</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyKG10Y2FycylcblxuYGBgIn0= -->
-<pre class="r"><code>str(mtcars)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJSY2hpdGVjdFwiICE9IFwicmNoaXRlY3RcIlxuXG5gYGAifQ== -->
+<pre class="r"><code>&quot;Rchitect&quot; != &quot;rchitect&quot;
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJ2RhdGEuZnJhbWUnOlx0MzIgb2JzLiBvZiAgMTEgdmFyaWFibGVzOlxuICQgbXBnIDogbnVtICAyMSAyMSAyMi44IDIxLjQgMTguNyAxOC4xIDE0LjMgMjQuNCAyMi44IDE5LjIgLi4uXG4gJCBjeWwgOiBudW0gIDYgNiA0IDYgOCA2IDggNCA0IDYgLi4uXG4gJCBkaXNwOiBudW0gIDE2MCAxNjAgMTA4IDI1OCAzNjAgLi4uXG4gJCBocCAgOiBudW0gIDExMCAxMTAgOTMgMTEwIDE3NSAxMDUgMjQ1IDYyIDk1IDEyMyAuLi5cbiAkIGRyYXQ6IG51bSAgMy45IDMuOSAzLjg1IDMuMDggMy4xNSAyLjc2IDMuMjEgMy42OSAzLjkyIDMuOTIgLi4uXG4gJCB3dCAgOiBudW0gIDIuNjIgMi44OCAyLjMyIDMuMjEgMy40NCAuLi5cbiAkIHFzZWM6IG51bSAgMTYuNSAxNyAxOC42IDE5LjQgMTcgLi4uXG4gJCB2cyAgOiBudW0gIDAgMCAxIDEgMCAxIDAgMSAxIDEgLi4uXG4gJCBhbSAgOiBudW0gIDEgMSAxIDAgMCAwIDAgMCAwIDAgLi4uXG4gJCBnZWFyOiBudW0gIDQgNCA0IDMgMyAzIDMgNCA0IDQgLi4uXG4gJCBjYXJiOiBudW0gIDQgNCAxIDEgMiAxIDQgMiAyIDQgLi4uXG4ifQ== -->
-<pre><code>&#39;data.frame&#39;:   32 obs. of  11 variables:
- $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
- $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
- $ disp: num  160 160 108 258 360 ...
- $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
- $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
- $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
- $ qsec: num  16.5 17 18.6 19.4 17 ...
- $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
- $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
- $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
- $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NSwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1CaEJKS3NRQ1lEbTNPQW9aR3BFUU1EQ3hPUXg4akF3c0FKb2l1QThzSkFCa2lOQUJCelFDWFlmVk9Ma2t1TEtxRmMxckRVdk5KaUdNYzFzYWdrQThwaDhVMHNna213ZTVVV1pKYWtGa0c1Yk1HSkphVkZlVEJlYUZFaXdneDJ2OVNDa3RLOFZEUnJoVUpTaTRwU2kwdUtNaE56RkFweUV2TlNTMmdpdyttZVdLeVFucG1ZUjVZQUF3TWZ5TTMyTjRvMktCeVp2Y3orWFp5cGZjM2JpZllmR01EQS9pR2J5bDE5cVFVT2F0bE1QSjY3NGh5VW5qNE8vbjd1cG9NQXV6Wkl3SUZmSU1uMzBzZFZNSE1jZkFOZnQ4cnRDRHFRbDdENE9wZHRJZHljRDFVUDNkZUpWTnZmc2kwQVNkamZCcW9DS3QzL25Bc3NZUDhVTEZ3SVZNb0ZEa05Nd0lpS1VlS2VOUzh4TjdVWUdnR3NzT2dFQ2NMWUpaVUZNRFpIU2laUUFoRzNIRVg1SllrbG1mbXcyR1V0eXN4TEwwYXpnYk1vdjF3UFpnc3ZFRE0xUUp6RmdlNlU1SnpFWXBoVFlJSmNLWWtsaVhwcFJTQUhNVEQ4UTlQQ25sOEFzaDZvaVFrNS9jSVRkaEdhQUg5cEhzZ2xLYnJKR2FWNTJicm0wRUJqaEFZVUw1VE5nY1JtaFZqSjlCOHRqTmhTODlJejgyQWh3NXFUbUpTYUErWHdBWDBNOXJCZUFUQkFZRW1IQ3loYXJGY0NEREdZT3E3ay9CeVlDTmh2RFA4QWNzaVhDTGNEQUFBPSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["diameter"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rotation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["rings"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Mercury","2":"Terrestrial planet","3":"0.382","4":"58.64","5":"FALSE"},{"1":"Venus","2":"Terrestrial planet","3":"0.949","4":"-243.02","5":"FALSE"},{"1":"Earth","2":"Terrestrial planet","3":"1.000","4":"1.00","5":"FALSE"},{"1":"Mars","2":"Terrestrial planet","3":"0.532","4":"1.03","5":"FALSE"},{"1":"Jupiter","2":"Gas giant","3":"11.209","4":"0.41","5":"TRUE"},{"1":"Saturn","2":"Gas giant","3":"9.449","4":"0.43","5":"TRUE"},{"1":"Uranus","2":"Gas giant","3":"4.007","4":"-0.72","5":"TRUE"},{"1":"Neptune","2":"Gas giant","3":"3.883","4":"0.67","5":"TRUE"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6MywibmNvbCI6NSwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1CaEJKS3NRQ1lEbTNPQW9aR3BFUU1EQ3hPUXg4akF3c0FKb2l1QThzSkFCa2lOQUVRTFdJTGRON1VvdWJTb0VzcGxEVXZOS3kyR2NsaDhFNHVLMGRRTGhhUVdGYVVXbHhSbEp1WW9GT1FrNXFXV2tDWER3TUFITXRYK1J0RUdoU096bDltL2l6TzFyM2s3MGY0aG04cGRmYWtGTUhrSDM4RFhyWEk3Z2c3a0pTeSt6bVZiYVAraDZxSDdPcEZxb0J6RTR5Z0F4Y3VzZVltNXFURG5zOEs4QkJLRXNVc3FDMkJzanBSTW9FUkphaEdNWDVSZmtsaVNtWjhITTZ3b015KzlHTTBHenFMOGNqMllMYnhRNXdBamdnR2tpQVhkT2NrNWljVXc1OEFFdVZJU1N4TDEwb3BBam1KZytJZW1oVDIvQU9RRW9DWW01S2lEeDJrUm1nQi9hUjdJTlNtNnlSbWxlZG02RnRCQVlvUmlYaWpOak1SbWhWako5Qjh0bk5oUzg5SXo4MkNodzVxVG1KU2FBK1h3QVgwTjlyUmVBVEJRWUhITUJSUXQxaXNCaGhwTUhWZHlmZzVNQk93M2huOEFSUUU0YWJJQ0FBQT0ifQ== -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["diameter"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rotation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["rings"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Mercury","2":"Terrestrial planet","3":"0.382","4":"58.64","5":"FALSE","_rn_":"1"},{"1":"Venus","2":"Terrestrial planet","3":"0.949","4":"-243.02","5":"FALSE","_rn_":"2"},{"1":"Mars","2":"Terrestrial planet","3":"0.532","4":"1.03","5":"FALSE","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[3]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Sorting</p>
+<p>Greater and less than</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6OCwibmNvbCI6NSwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1CaEJKS3NRQ1lEbTNPQW9aR3BFUU1EQ3hPUXg4akF3c0FKb2l1QThzSkFCa2lOQUJCelFDWFlmVk9Ma2t1TEtxRmNGdC9Fb21Jb216VXNOYThVem5GTkxDckpnR255U3kwb0tjMUxoWExaUW9zU0VTclpnaE5MU292eVlFcTlTZ3N5UzFLTDBLd1ZDa2t0S2tvdExpbktUTXhSS01oSnpFc3RvWWtNcDN0aXNVSjZabUllV1FJTURId2dOOXZmS05xZ2NHVDJNdnVIYkNwMzlhVVcyTCtMTTdXdmVUdlIvZ01ER0Rqd0N5VDVYdnE0eWtHQVhadUp4M09YZzlMVHg4SGZ6OTEwVU1zR2NlTmc1amo0QnI1dWxkc1JaUCtoNnFIN09wSHFBM2tKaTY5ejJSYkN6TEYvV2dEbTczL09aUXRpMmQ4R3FnWnFzYjhGNXRvQ2xYQ0J3eEFUTUtKaWxMaG56VXZNVFMyR1JnQXJMS0pCZ2pCMlNXVUJqTTJSa2dtVUFFVVlsRitVWDVKWWtwa1BpMC9Xb3N5ODlHSTBHemlMOHN2MVlMYndRcDBJY2dvTEVET0JFeWhFakIyVVBpQ3BFTldKeVRtSnhUQW53Z1M1VWhKTEV2WFNpa0FPWldENGg2YUZQYjhBNUN5Z0ppYmtkQTFQOEVWb0F2eWxlU0FYcHVnbVo1VG1aZXNhUWdNVEZtaThVSm9EaVExMUpkTi90TEJqUzgxTHo0U25mdGFjeEtUVUhDaUhEeGdTNElEUUt3QUdGQ3hKY1FGRmkvVktnQ0VKVThlVm5KOERFd0g3amVFZkFERlZoaERQQXdBQSJ9 -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["diameter"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rotation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["rings"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Mercury","2":"Terrestrial planet","3":"0.382","4":"58.64","5":"FALSE","_rn_":"1"},{"1":"Mars","2":"Terrestrial planet","3":"0.532","4":"1.03","5":"FALSE","_rn_":"4"},{"1":"Venus","2":"Terrestrial planet","3":"0.949","4":"-243.02","5":"FALSE","_rn_":"2"},{"1":"Earth","2":"Terrestrial planet","3":"1.000","4":"1.00","5":"FALSE","_rn_":"3"},{"1":"Neptune","2":"Gas giant","3":"3.883","4":"0.67","5":"TRUE","_rn_":"8"},{"1":"Uranus","2":"Gas giant","3":"4.007","4":"-0.72","5":"TRUE","_rn_":"7"},{"1":"Saturn","2":"Gas giant","3":"9.449","4":"0.43","5":"TRUE","_rn_":"6"},{"1":"Jupiter","2":"Gas giant","3":"11.209","4":"0.41","5":"TRUE","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[8]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>List</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbGlzdFxuXG5gYGAifQ== -->
-<pre class="r"><code>my_list
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXCJyYWluaW5nXCIgPD0gXCJ0YWJsZVwiXG5cbmBgYCJ9 -->
+<pre class="r"><code>&quot;raining&quot; &lt;= &quot;table&quot;
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiW1sxXV1cbiBbMV0gIDEgIDIgIDMgIDQgIDUgIDYgIDcgIDggIDkgMTBcblxuW1syXV1cbiAgICAgWywxXSBbLDJdIFssM11cblsxLF0gICAgMSAgICA0ICAgIDdcblsyLF0gICAgMiAgICA1ICAgIDhcblszLF0gICAgMyAgICA2ICAgIDlcblxuW1szXV1cbiJ9 -->
-<pre><code>[[1]]
- [1]  1  2  3  4  5  6  7  8  9 10
-
-[[2]]
-     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9
-
-[[3]]</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1CaEJKS3NRQ1lEbTNPQW9aR3BFUU1EQ3hPUXg4akF3c0FKb2l1QThzSkFCa2lOQUJDelFDWFlmVk9Ma2t1TEtxRmMxckRVdk5KaUdNYzFzYWdrQThwaDhVMHNLa2JUTEJTU1dsU1VXbHhTbEptWW8xQ1FrNWlYV2tKbEdRWUdQcEI5OWplS05pZ2NtYjNNL2wyY3FYM04yNG4ySHhqQXdQNGhtOHBkZmFrRk1IVU92b0d2VytWMkJCM0lTMWg4bmN1MkVLN3VROVZEOTNVaTFVQW1GOWo5R0FBbHRGanpFbk5UWVo1bGhRVUFTQkRHTHFrc2dMRTVVaktCRWlXcFJUQitVWDVKWWtsbWZoN01zS0xNdlBSaU5CczRpL0xMOVdDMjhBSXhVd1BVSGVoT1NjNUpMSVk1QlNiSWxaSllrcWlYVmdSeUVBUERQelF0N1BrRklPdUJtcGlRWXh5ZUZJclFCUGhMODBBdVNkRk56aWpOeTlZMWhRWVNJeFR6UW1rV0pEWXJ4RXFtLzJoaHhKYWFsNTZaQndzWjFwekVwTlFjS0ljUDZHT3doL1VLZ0FFQ2kzTXVvR2l4WGdrd3hHRHF1Skx6YzJBaVlMOHgvQU1BRU9PdzMra0NBQUE9In0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["diameter"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rotation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["rings"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Mercury","2":"Terrestrial planet","3":"0.382","4":"58.64","5":"FALSE","_rn_":"1"},{"1":"Venus","2":"Terrestrial planet","3":"0.949","4":"-243.02","5":"FALSE","_rn_":"2"},{"1":"Earth","2":"Terrestrial planet","3":"1.000","4":"1.00","5":"FALSE","_rn_":"3"},{"1":"Mars","2":"Terrestrial planet","3":"0.532","4":"1.03","5":"FALSE","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
-<pre><code>NA</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFRSVUVcbiJ9 -->
+<pre><code>[1] TRUE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Creating a named list</p>
+<p>Compare vectors</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbGlzdFxuXG5gYGAifQ== -->
-<pre class="r"><code>my_list
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPD0gMTRcblxuYGBgIn0= -->
+<pre class="r"><code>views &lt;= 14
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiJHZlY3RvclxuIFsxXSAgMSAgMiAgMyAgNCAgNSAgNiAgNyAgOCAgOSAxMFxuXG4kbWF0cml4XG4gICAgIFssMV0gWywyXSBbLDNdXG5bMSxdICAgIDEgICAgNCAgICA3XG5bMixdICAgIDIgICAgNSAgICA4XG5bMyxdICAgIDMgICAgNiAgICA5XG5cbiRgZGF0YSBmcmFtZWBcbiJ9 -->
-<pre><code>$vector
- [1]  1  2  3  4  5  6  7  8  9 10
-
-$matrix
-     [,1] [,2] [,3]
-[1,]    1    4    7
-[2,]    2    5    8
-[3,]    3    6    9
-
-$`data frame`</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NCwibmNvbCI6NSwic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFCZ3R5aVREbWl1QmlZR0JnWm1CaEJKS3NRQ1lEbTNPQW9aR3BFUU1EQ3hPUXg4akF3c0FKb2l1QThzSkFCa2lOQUJDelFDWFlmVk9Ma2t1TEtxRmMxckRVdk5KaUdNYzFzYWdrQThwaDhVMHNLa2JUTEJTU1dsU1VXbHhTbEptWW8xQ1FrNWlYV2tKbEdRWUdQcEI5OWplS05pZ2NtYjNNL2wyY3FYM04yNG4ySHhqQXdQNGhtOHBkZmFrRk1IVU92b0d2VytWMkJCM0lTMWg4bmN1MkVLN3VROVZEOTNVaTFVQW1GOWo5R0FBbHRGanpFbk5UWVo1bGhRVUFTQkRHTHFrc2dMRTVVaktCRWlXcFJUQitVWDVKWWtsbWZoN01zS0xNdlBSaU5CczRpL0xMOVdDMjhBSXhVd1BVSGVoT1NjNUpMSVk1QlNiSWxaSllrcWlYVmdSeUVBUERQelF0N1BrRklPdUJtcGlRWXh5ZUZJclFCUGhMODBBdVNkRk56aWpOeTlZMWh3WVNJeFR6UW1rV0pEWXJ4RXFtLzJoaHhKYWFsNTZaQndzWjFwekVwTlFjS0ljUDZHT3doL1VLZ0FFQ2kzTXVvR2l4WGdrd3hHRHF1Skx6YzJBaVlMOHgvQU1BVktjTUdla0NBQUE9In0= -->
-<div data-pagedtable="false">
-<script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["name"],"name":[1],"type":["chr"],"align":["left"]},{"label":["type"],"name":[2],"type":["chr"],"align":["left"]},{"label":["diameter"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["rotation"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["rings"],"name":[5],"type":["lgl"],"align":["right"]}],"data":[{"1":"Mercury","2":"Terrestrial planet","3":"0.382","4":"58.64","5":"FALSE","_rn_":"1"},{"1":"Venus","2":"Terrestrial planet","3":"0.949","4":"-243.02","5":"FALSE","_rn_":"2"},{"1":"Earth","2":"Terrestrial planet","3":"1.000","4":"1.00","5":"FALSE","_rn_":"3"},{"1":"Mars","2":"Terrestrial planet","3":"0.532","4":"1.03","5":"FALSE","_rn_":"4"}],"options":{"columns":{"min":{},"max":[10],"total":[5]},"rows":{"min":[10],"max":[10],"total":[4]},"pages":{}}}
-  </script>
-</div>
-<!-- rnb-frame-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTkFcbiJ9 -->
-<pre><code>NA</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSBbLDJdIFssM10gIFssNF0gWyw1XSAgWyw2XSBbLDddXG5bMSxdIEZBTFNFIFRSVUUgVFJVRSAgVFJVRSBUUlVFIEZBTFNFIFRSVUVcblsyLF0gRkFMU0UgVFJVRSBUUlVFIEZBTFNFIFRSVUUgIFRSVUUgVFJVRVxuIn0= -->
+<pre><code>      [,1] [,2] [,3]  [,4] [,5]  [,6] [,7]
+[1,] FALSE TRUE TRUE  TRUE TRUE FALSE TRUE
+[2,] FALSE TRUE TRUE FALSE TRUE  TRUE TRUE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Selecting elements from a list</p>
+<p>Operators logical</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubXlfbGlzdFtbMl1dWzIsMl1cblxuYGBgIn0= -->
-<pre class="r"><code>my_list[[2]][2,2]
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlua2VkaW4gPD0gMTBcblxuYGBgIn0= -->
+<pre class="r"><code>linkedin &lt;= 10
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
-<pre><code>[1] 5</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFIEZBTFNFICBUUlVFICBUUlVFIEZBTFNFIEZBTFNFXG4ifQ== -->
+<pre><code>[1] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpEYXRhZnJhbWVzDQoNCmBgYHtyfQ0KbXRjYXJzDQoNCmhlYWQobXRjYXJzKQ0KdGFpbChtdGNhcnMpDQoNCnN0cihtdGNhcnMpDQpgYGANCmBgYHtyfQ0KbmFtZSA8LSBjKCJNZXJjdXJ5IiwgIlZlbnVzIiwgIkVhcnRoIiwgIk1hcnMiLCAiSnVwaXRlciIsICJTYXR1cm4iLCAiVXJhbnVzIiwgIk5lcHR1bmUiKQ0KdHlwZSA8LSBjKCJUZXJyZXN0cmlhbCBwbGFuZXQiLCAiVGVycmVzdHJpYWwgcGxhbmV0IiwgIlRlcnJlc3RyaWFsIHBsYW5ldCIsIA0KICAgICAgICAgICJUZXJyZXN0cmlhbCBwbGFuZXQiLCAiR2FzIGdpYW50IiwgIkdhcyBnaWFudCIsICJHYXMgZ2lhbnQiLCAiR2FzIGdpYW50IikNCmRpYW1ldGVyIDwtIGMoMC4zODIsIDAuOTQ5LCAxLCAwLjUzMiwgMTEuMjA5LCA5LjQ0OSwgNC4wMDcsIDMuODgzKQ0Kcm90YXRpb24gPC0gYyg1OC42NCwgLTI0My4wMiwgMSwgMS4wMywgMC40MSwgMC40MywgLTAuNzIsIDAuNjcpDQpyaW5ncyA8LSBjKEZBTFNFLCBGQUxTRSwgRkFMU0UsIEZBTFNFLCBUUlVFLCBUUlVFLCBUUlVFLCBUUlVFKQ0KDQpwbGFuZXRzX2RmIDwtIGRhdGEuZnJhbWUobmFtZSx0eXBlLGRpYW1ldGVyLHJvdGF0aW9uLCByaW5ncykNCnBsYW5ldHNfZGYNCmBgYA0KYGBge3J9DQpwbGFuZXRzX2RmWzEsM10NCnBsYW5ldHNfZGZbNCxdDQpwbGFuZXRzX2RmWzE6NV0NCnBsYW5ldHNfZGZbMTo1LGMoInJvdGF0aW9uIiwidHlwZSIpXQ0KDQpyaW5nc192ZWN0b3IgPC0gcGxhbmV0c19kZiRyaW5ncw0KcmluZ3NfdmVjdG9yDQoNCnBsYW5ldHNfZGZbcmluZ3NfdmVjdG9yLF0NCg0Kc3Vic2V0KHBsYW5ldHNfZGYsIHN1YnNldCA9IGRpYW1ldGVyIDwgMSkNCg0KYGBgDQoNClNvcnRpbmcNCmBgYHtyfQ0KYSA8LSBjKDEwMCwxMCwxMDAwKQ0Kb3JkZXIoYSkNCmIgPC0gYVtvcmRlcihhKV0NCg0KYg0KDQpwb3NpdGlvbnMgPC0gb3JkZXIocGxhbmV0c19kZiRkaWFtZXRlcikNCnBvc2l0aW9ucw0KcGxhbmV0c19kZltwb3NpdGlvbnMsXQ0KDQoNCmBgYA0KTGlzdA0KDQpgYGB7cn0NCg0KbXlfdmVjdG9yIDwtIDE6MTANCm15X21hdHJpeCA8LSBtYXRyaXgoMTo5LCBuY29sPTMpDQpteV9kZiA8LSBwbGFuZXRzX2RmWzE6NCxdDQoNCm15X2xpc3QgPC0gbGlzdChteV92ZWN0b3IsIG15X21hdHJpeCwgbXlfZGYpDQpteV9saXN0DQpgYGANCkNyZWF0aW5nIGEgbmFtZWQgbGlzdA0KDQpgYGB7cn0NCg0KbmFtZXMobXlfbGlzdCkgPC0gYygidmVjdG9yIiwibWF0cml4IiwiZGF0YSBmcmFtZSIpDQpteV9saXN0DQpgYGANCg0KU2VsZWN0aW5nIGVsZW1lbnRzIGZyb20gYSBsaXN0DQpgYGB7cn0NCg0KbXlfbGlzdFtbMl1dWzIsMl0NCg0KDQpgYGANCg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpJbnRlcm1lZGlhdGUgUg0KYGBge3J9DQoNCjMgPT0gKDIgKyAxKQ0KImludGVybWVkaWF0ZSIgIT0gInIiDQpUUlVFICE9IEZBTFNFDQoiUmNoaXRlY3QiICE9ICJyY2hpdGVjdCINCg0KYGBgDQpHcmVhdGVyIGFuZCBsZXNzIHRoYW4NCmBgYHtyfQ0KLTYgKiA1ICsgMiA+PSAtMTAgKzEgDQoNCiJAIiA8PSAiPyINCg0KInJhaW5pbmciIDw9ICJ0YWJsZSINCg0KVFJVRSA+IEZBTFNFDQoNCmBgYA0KQ29tcGFyZSB2ZWN0b3JzDQpgYGB7cn0NCmxpbmtlZGluIDwtIGMoMTYsOSwxMyw1LDIsMTcsMTQpDQpmYWNlYm9vayA8LSBjKDE3LDcsNSwxNiw4LDEzLDE0KQ0KDQpsaW5rZWRpbiA+IDE1DQpmYWNlYm9vayA8PSAxMA0KDQpsaW5rZWRpbiA+IGZhY2Vib29rDQoNCnZpZXdzIDwtIG1hdHJpeChjKGxpbmtlZGluLGZhY2Vib29rKSwgbnJvdyA9IDIsIGJ5cm93ID0gVFJVRSkNCnZpZXdzDQoNCg0Kdmlld3MgPT0gMTMNCg0Kdmlld3MgPD0gMTQNCg0KYGBgDQpPcGVyYXRvcnMgbG9naWNhbCANCmBgYHtyfQ0KDQpsaW5rZWRpbiA8PSAxMA0KDQpgYGANCg0KDQoNCg==</div>
 
 
 
@@ -391,7 +314,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("Sesion 2.Rmd");
+  window.initializeSourceEmbed("Sesion 3.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>
