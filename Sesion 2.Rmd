@@ -24,4 +24,24 @@ rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 planets_df <- data.frame(name,type,diameter,rotation, rings)
 planets_df
 ```
+```{r}
+planets_df[1,3]
+planets_df[4,]
+planets_df[1:5]
+planets_df[1:5,c("rotation","type")]
+
+rings_vector <- planets_df$rings
+rings_vector
+
+planets_df[rings_vector,]
+
+subset(planets_df, subset = diameter < 1)
+
+```
+
+Sorting
+```{r}
+
+
+```
 
