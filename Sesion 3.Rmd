@@ -45,8 +45,57 @@ views <= 14
 Operators logical 
 ```{r}
 
-linkedin <= 10
+linkedin <= 10 | facebook == 13
 
+views > 11 & views <= 14
+
+```
+The if statement
+```{r}
+
+medium <- "LinkedIn"
+num_views <- 14
+
+if(medium =="Linkedin"){
+  print("Showing Linkedin information")
+}else{
+  print("Unknown medium")
+}
+
+if(num_views > 15){
+  print("You're popular!")
+}else{
+  print("Try to be more visible!")
+}
+```
+Customize further: else if
+```{r}
+if(medium == "LinkedIn"){
+  print("Showing LinkedIn information")
+}else if(medium == "Facebook"){
+  print("Show Facebook information")
+}else{
+  print("Unknown medium")
+}
+```
+Else if 2.0
+```{r}
+number <- 6
+result <- ""
+if(number < 10){
+  if(number < 5){
+    result <- "extra small"
+  }
+  else{
+    result <- "small"
+  }
+}else if(number < 100){
+  result <- "medium"
+}else{
+  result <- "large"
+}
+
+print(result)
 ```
 
 

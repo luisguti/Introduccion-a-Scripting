@@ -256,18 +256,60 @@ pre code {
 <p>Operators logical</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlua2VkaW4gPD0gMTBcblxuYGBgIn0= -->
-<pre class="r"><code>linkedin &lt;= 10
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld3MgPiAxMSAmIHZpZXdzIDw9IDE0XG5cbmBgYCJ9 -->
+<pre class="r"><code>views &gt; 11 &amp; views &lt;= 14
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIEZBTFNFICBUUlVFIEZBTFNFICBUUlVFICBUUlVFIEZBTFNFIEZBTFNFXG4ifQ== -->
-<pre><code>[1] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICAgWywxXSAgWywyXSAgWywzXSAgWyw0XSAgWyw1XSAgWyw2XSBbLDddXG5bMSxdIEZBTFNFIEZBTFNFICBUUlVFIEZBTFNFIEZBTFNFIEZBTFNFIFRSVUVcblsyLF0gRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgRkFMU0UgIFRSVUUgVFJVRVxuIn0= -->
+<pre><code>      [,1]  [,2]  [,3]  [,4]  [,5]  [,6] [,7]
+[1,] FALSE FALSE  TRUE FALSE FALSE FALSE TRUE
+[2,] FALSE FALSE FALSE FALSE FALSE  TRUE TRUE</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The if statement</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaWYobnVtX3ZpZXdzID4gMTUpe1xuICBwcmludChcIllvdSdyZSBwb3B1bGFyIVwiKVxufWVsc2V7XG4gIHByaW50KFwiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZSFcIilcbn1cblxuYGBgIn0= -->
+<pre class="r"><code>if(num_views &gt; 15){
+  print(&quot;You&#39;re popular!&quot;)
+}else{
+  print(&quot;Try to be more visible!&quot;)
+}
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZSFcIlxuIn0= -->
+<pre><code>[1] &quot;Try to be more visible!&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Customize further: else if</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuICBwcmludChcIlNob3dpbmcgTGlua2VkSW4gaW5mb3JtYXRpb25cIilcblxuYGBgIn0= -->
+<pre class="r"><code>  print(&quot;Showing LinkedIn information&quot;)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiU2hvd2luZyBMaW5rZWRJbiBpbmZvcm1hdGlvblwiXG4ifQ== -->
+<pre><code>[1] &quot;Showing LinkedIn information&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Else if 2.0</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucHJpbnQocmVzdWx0KVxuXG5gYGAifQ== -->
+<pre class="r"><code>print(result)
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic21hbGxcIlxuIn0= -->
+<pre><code>[1] &quot;small&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpJbnRlcm1lZGlhdGUgUg0KYGBge3J9DQoNCjMgPT0gKDIgKyAxKQ0KImludGVybWVkaWF0ZSIgIT0gInIiDQpUUlVFICE9IEZBTFNFDQoiUmNoaXRlY3QiICE9ICJyY2hpdGVjdCINCg0KYGBgDQpHcmVhdGVyIGFuZCBsZXNzIHRoYW4NCmBgYHtyfQ0KLTYgKiA1ICsgMiA+PSAtMTAgKzEgDQoNCiJAIiA8PSAiPyINCg0KInJhaW5pbmciIDw9ICJ0YWJsZSINCg0KVFJVRSA+IEZBTFNFDQoNCmBgYA0KQ29tcGFyZSB2ZWN0b3JzDQpgYGB7cn0NCmxpbmtlZGluIDwtIGMoMTYsOSwxMyw1LDIsMTcsMTQpDQpmYWNlYm9vayA8LSBjKDE3LDcsNSwxNiw4LDEzLDE0KQ0KDQpsaW5rZWRpbiA+IDE1DQpmYWNlYm9vayA8PSAxMA0KDQpsaW5rZWRpbiA+IGZhY2Vib29rDQoNCnZpZXdzIDwtIG1hdHJpeChjKGxpbmtlZGluLGZhY2Vib29rKSwgbnJvdyA9IDIsIGJ5cm93ID0gVFJVRSkNCnZpZXdzDQoNCg0Kdmlld3MgPT0gMTMNCg0Kdmlld3MgPD0gMTQNCg0KYGBgDQpPcGVyYXRvcnMgbG9naWNhbCANCmBgYHtyfQ0KDQpsaW5rZWRpbiA8PSAxMA0KDQpgYGANCg0KDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpJbnRlcm1lZGlhdGUgUg0KYGBge3J9DQoNCjMgPT0gKDIgKyAxKQ0KImludGVybWVkaWF0ZSIgIT0gInIiDQpUUlVFICE9IEZBTFNFDQoiUmNoaXRlY3QiICE9ICJyY2hpdGVjdCINCg0KYGBgDQpHcmVhdGVyIGFuZCBsZXNzIHRoYW4NCmBgYHtyfQ0KLTYgKiA1ICsgMiA+PSAtMTAgKzEgDQoNCiJAIiA8PSAiPyINCg0KInJhaW5pbmciIDw9ICJ0YWJsZSINCg0KVFJVRSA+IEZBTFNFDQoNCmBgYA0KQ29tcGFyZSB2ZWN0b3JzDQpgYGB7cn0NCmxpbmtlZGluIDwtIGMoMTYsOSwxMyw1LDIsMTcsMTQpDQpmYWNlYm9vayA8LSBjKDE3LDcsNSwxNiw4LDEzLDE0KQ0KDQpsaW5rZWRpbiA+IDE1DQpmYWNlYm9vayA8PSAxMA0KDQpsaW5rZWRpbiA+IGZhY2Vib29rDQoNCnZpZXdzIDwtIG1hdHJpeChjKGxpbmtlZGluLGZhY2Vib29rKSwgbnJvdyA9IDIsIGJ5cm93ID0gVFJVRSkNCnZpZXdzDQoNCg0Kdmlld3MgPT0gMTMNCg0Kdmlld3MgPD0gMTQNCg0KYGBgDQpPcGVyYXRvcnMgbG9naWNhbCANCmBgYHtyfQ0KDQpsaW5rZWRpbiA8PSAxMCB8IGZhY2Vib29rID09IDEzDQoNCnZpZXdzID4gMTEgJiB2aWV3cyA8PSAxNA0KDQpgYGANClRoZSBpZiBzdGF0ZW1lbnQNCmBgYHtyfQ0KDQptZWRpdW0gPC0gIkxpbmtlZEluIg0KbnVtX3ZpZXdzIDwtIDE0DQoNCmlmKG1lZGl1bSA9PSJMaW5rZWRpbiIpew0KICBwcmludCgiU2hvd2luZyBMaW5rZWRpbiBpbmZvcm1hdGlvbiIpDQp9ZWxzZXsNCiAgcHJpbnQoIlVua25vd24gbWVkaXVtIikNCn0NCg0KaWYobnVtX3ZpZXdzID4gMTUpew0KICBwcmludCgiWW91J3JlIHBvcHVsYXIhIikNCn1lbHNlew0KICBwcmludCgiVHJ5IHRvIGJlIG1vcmUgdmlzaWJsZSEiKQ0KfQ0KYGBgDQpDdXN0b21pemUgZnVydGhlcjogZWxzZSBpZg0KYGBge3J9DQppZihtZWRpdW0gPT0gIkxpbmtlZEluIil7DQogIHByaW50KCJTaG93aW5nIExpbmtlZEluIGluZm9ybWF0aW9uIikNCn1lbHNlIGlmKG1lZGl1bSA9PSAiRmFjZWJvb2siKXsNCiAgcHJpbnQoIlNob3cgRmFjZWJvb2sgaW5mb3JtYXRpb24iKQ0KfWVsc2V7DQogIHByaW50KCJVbmtub3duIG1lZGl1bSIpDQp9DQpgYGANCkVsc2UgaWYgMi4wDQpgYGB7cn0NCm51bWJlciA8LSA2DQpyZXN1bHQgPC0gIiINCmlmKG51bWJlciA8IDEwKXsNCiAgaWYobnVtYmVyIDwgNSl7DQogICAgcmVzdWx0IDwtICJleHRyYSBzbWFsbCINCiAgfQ0KICBlbHNlew0KICAgIHJlc3VsdCA8LSAic21hbGwiDQogIH0NCn1lbHNlIGlmKG51bWJlciA8IDEwMCl7DQogIHJlc3VsdCA8LSAibWVkaXVtIg0KfWVsc2V7DQogIHJlc3VsdCA8LSAibGFyZ2UiDQp9DQoNCnByaW50KHJlc3VsdCkNCmBgYA0KDQoNCg0K</div>
 
 
 
