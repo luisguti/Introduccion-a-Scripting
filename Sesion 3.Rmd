@@ -97,6 +97,24 @@ if(number < 10){
 
 print(result)
 ```
+Loops
+```{r}
+speed <- 64
+
+while(speed > 30){
+  print(paste("Your speed is",speed))
+  
+  if(speed >= 48){
+    print("Slow down big time")
+    speed <- speed - 11
+  }else{
+    print("Slow down!")
+    speed <- speed - 6
+  }
+}
+
+speed
+```
 
 
 
