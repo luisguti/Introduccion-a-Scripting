@@ -137,6 +137,10 @@ while(speed > 30){
 
 speed
 ```
+
+
+
+
 **For**
 ```{r}
 linkedin <- c(16,9,13,5,2,17,14)
@@ -169,7 +173,7 @@ for(i in 1:length(nyc)){
 
 class(nyc)
 ```
-Loop Over a Matrix
+**Loop Over a Matrix**
 
 ```{r}
 
