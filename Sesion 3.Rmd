@@ -1,9 +1,9 @@
 ---
-title: "R Notebook"
+title: "SESION 3"
 output: html_notebook
 ---
 
-Intermediate R
+**Intermediate R**
 ```{r}
 
 3 == (2 + 1)
@@ -12,7 +12,7 @@ TRUE != FALSE
 "Rchitect" != "rchitect"
 
 ```
-Greater and less than
+**Greater and less than**
 ```{r}
 -6 * 5 + 2 >= -10 +1 
 
@@ -23,7 +23,7 @@ Greater and less than
 TRUE > FALSE
 
 ```
-Compare vectors
+**Compare vectors**
 ```{r}
 linkedin <- c(16,9,13,5,2,17,14)
 facebook <- c(17,7,5,16,8,13,14)
@@ -42,7 +42,7 @@ views == 13
 views <= 14
 
 ```
-Operators logical 
+**Operators logical** 
 ```{r}
 
 linkedin <= 10 | facebook == 13
@@ -50,7 +50,7 @@ linkedin <= 10 | facebook == 13
 views > 11 & views <= 14
 
 ```
-The if statement
+**The if statement**
 ```{r}
 
 medium <- "LinkedIn"
@@ -68,7 +68,7 @@ if(num_views > 15){
   print("Try to be more visible!")
 }
 ```
-Customize further: else if
+**Customize further: else if**
 ```{r}
 if(medium == "LinkedIn"){
   print("Showing LinkedIn information")
@@ -78,7 +78,7 @@ if(medium == "LinkedIn"){
   print("Unknown medium")
 }
 ```
-Else if 2.0
+**Else if 2.0**
 ```{r}
 number <- 6
 result <- ""
@@ -97,7 +97,7 @@ if(number < 10){
 
 print(result)
 ```
-Loops
+**Loops**
 ```{r}
 speed <- 64
 
@@ -115,6 +115,74 @@ while(speed > 30){
 
 speed
 ```
+**Break**
+```{r}
+speed <- 88
+
+while(speed > 30){
+  print(paste("Your speed is",speed))
+  
+  if(speed > 80){
+    break
+  }
+  
+  if(speed > 48){
+    print("Slow down big time!")
+    speed <- speed -11
+  }else{
+    print("Slow down!")
+    speed <- speed -6
+  }
+}
+
+speed
+```
+**For**
+```{r}
+linkedin <- c(16,9,13,5,2,17,14)
+
+for(l in linkedin){
+  print(l)
+}
+
+for (i in l:length(linkedin)){
+  print(linkedin[i])
+}
+```
+**Loop over a List**
+```{r}
+
+nyc <- list(pop=8405837, boroyghs=c("Manhattan","Bronx","Queens","Staten Island"), capital=FALSE)
+for (n in nyc){
+  print(n)
+}
+
+for(i in 1:length(nyc)){
+  if(i==2){
+    for(j in 1:length(nyc[[i]])){
+      print(nyc[[i]][j]) 
+    }
+  }else{
+    print(nyc[[i]])
+  }
+}
+
+class(nyc)
+```
+Loop Over a Matrix
+
+```{r}
+
+views <- matrix(c(linkedin,facebook), nrow=2, byrow = TRUE)
+views
+
+for(row in 1:nrow(views)){
+  for(col in 1:ncol(views)){
+    print(paste("On row", row, "and column", col, "contains", views[row,col]))
+  }
+}
+```
+
 
 
 
