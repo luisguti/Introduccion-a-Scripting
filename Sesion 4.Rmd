@@ -1,18 +1,106 @@
 ---
-title: "R Notebook"
+title: "SESION 4"
 output: html_notebook
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
-
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+**Functions**
 
 ```{r}
-plot(cars)
+pow_two <- function(x, print_info=TRUE){
+  y <- x  ^ 2
+  if(print_info){
+    print(paste(x, "to the power two equals", y))
+  }
+  return(y)
+}
+
+result <- pow_two(3)
+result
+  
+```
+ **Function Scoping**
+ 
+```{r}
+pow_two <- function(x){
+  y <- x ^ 2
+  return(y)
+}
+
+pow_two(4)
+y
+x
+```
+**R passes arguments by value**
+
+```{r}
+triple <- function(x){
+  x <- 3 * x
+  x
+  
+}
+
+a <- 5
+triple(a)
+a
+
+```
+**Others type of parameters**
+
+```{r}
+
+linkedin <- c(16,9,13,5,2,17,14)
+
+interpret <- function(num_views){
+  if(num_views > 15){
+    print("You're popular!")
+    return(num_views)
+  }
+  else{
+    print("Try to be more visible!")
+    return(0)
+  }
+}
+
+interpret(linkedin[1])
+
+interpret_all <- function(views, return_sum=TRUE){
+  count <- 0
+  
+  for(v in views){
+    count <- count + interpret(v)
+  }
+  
+  if(return_sum){
+    return(count)
+  }else{
+    return(NULL)
+  }
+}
+
+interpret_all(linkedin)
+  
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+ **Load an R Package**
+ 
+```{r}
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+library(ggplot2)
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+qplot(mtcars$wt, mtcars$hp)
+
+```
+ **Use Apply with R**
+ 
+```{r}
+
+temp <- list(c(3,7,9,6,1), c(6,9,12,13,5), c(4,8,3,-1,-3), c(1,4,7,2,-2), c(5,7,9,4,2), c(-3,5,8,9,4), c(3,6,9,4,1))
+
+min(c(3,7,9,6,1))
+
+
+lapply(temp, min)
+
+```
+ 
+ 
