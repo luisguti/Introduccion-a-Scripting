@@ -1,0 +1,14 @@
+---
+title: "Sesion 5"
+output: html_notebook
+---
+
+**Introduction to the Tidyverse**
+
+```{r}
+library(gapminder)
+library(dplyr)
+
+gapminder
+```
+
