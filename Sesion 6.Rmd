@@ -7,6 +7,7 @@ output: html_notebook
 library(tidyverse)
 library(ggplot2)
 library(gapminder)
+library(dplyr)
 
 gapminder %>%
   summarize(medianLifeExp = median(lifeExp))
@@ -175,9 +176,39 @@ counties_selected %>%
 counties_selected <- counties %>%
   dplyr::select(county, region, state, population, citizens, walk)
 
-counties_selected %>%
+test <- counties_selected %>%
   mutate(population_walk = population*walk/100) %>%
   count(state, wt=population_walk, sort = TRUE)
+
+test %>%
+  dplyr::select(state,number=n)
+
+```
+Summarizing 
+
+```{r}
+
+counties_selected <- counties %>%
+  dplyr::select(county, population, income, unemployment)
+
+counties_selected %>% 
+  summarize(min_popularion=min(population), max_unemployment=max(unemployment), average_income=mean(income))
+
+counties_selected <- counties %>%
+  dplyr::select(state, county, population, land_area)
+
+counties_selected %>%
+  group_by(state) %>%
+  summarize(total_area=sum(land_area), total_population=sum(population))
+
+counties_selected <- counties %>%
+  dplyr::select(region, state, county, population)
+
+counties_selected %>%
+  group_by(region, state) %>%
+  summarize(total_pop = sum(population)) %>%
+  ungroup() %>%
+  summarize(average_pop=mean(total_pop), median_pop=median(total_pop))
 
 ```
 
