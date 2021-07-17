@@ -212,3 +212,26 @@ counties_selected %>%
 
 ```
 
+
+The top_n verb
+
+```{r}
+
+counties_selected <- counties %>%
+  dplyr::select(region, state, county, metro, population, walk)
+
+counties_selected %>%
+  group_by(region) %>%
+  top_n(2, walk)
+
+counties_selected <- counties %>%
+  dplyr::select(region, state, county, population, income)
+
+counties_selected %>%
+  group_by(region, state) %>%
+  summarize(average_income = mean(income)) %>%
+  #ngroup() %>%
+  top_n(1, average_income)
+```
+
+
