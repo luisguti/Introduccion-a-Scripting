@@ -12,13 +12,64 @@ parts <- read_csv('parts.csv')
 part_categories <- read_csv('part_categories.csv')
 
 ```
+```{r}
 
-Using transmute
+counties <- read_csv("counties.csv")
+counties
+
+counties %>%
+  dplyr::select(state, county, population, professional:production)
+
+counties %>%
+  dplyr::select(state, county, population, ends_with("work"), starts_with("income"))
+
+```
+**The rename verb**
+
+```{r}
+
+counties %>%
+  count(state) %>%
+  rename(num_counties = n)
+
+counties %>%
+  dplyr::select(state, county, poverty_rate = poverty)
+```
+
+
+**Using transmute**
 
 ```{r}
 counties %>%
-  transmute(state, county, population, desity=population/land_area) %>%
+  transmute(state, county, population, density=population/land_area) %>%
   filter(population > 1000000) %>%
-  arrange(density())
+  arrange(density)
+```
+
+```{r}
+counties %>%
+  rename(unemployment_rate = unemployment)
+
+counties %>%
+  dplyr::select(state, county, contains("poverty"))
+```
+
+
+**Joining Data With dplyr**
+
+```{r}
+
+view(sets)
+
+sets
+themes
+
+
+
+```
+
+```{r}
+sets %>% 
+  inner_join(themes, by=c("theme_id" = "id"))
 ```
 
