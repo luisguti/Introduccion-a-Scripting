@@ -1,0 +1,24 @@
+---
+title: "Sesion 7"
+output: html_notebook
+---
+
+```{r}
+library(tidyverse)
+
+sets <- read_csv('sets.csv')
+themes <- read_csv('themes.csv')
+parts <- read_csv('parts.csv')
+part_categories <- read_csv('part_categories.csv')
+
+```
+
+Using transmute
+
+```{r}
+counties %>%
+  transmute(state, county, population, desity=population/land_area) %>%
+  filter(population > 1000000) %>%
+  arrange(density())
+```
+
