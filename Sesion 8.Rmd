@@ -97,4 +97,16 @@ millennium_falcon_colors %>%
 
 
 ```
+```{r}
+parts %>%
+  count(part_cat_id) %>%
+  right_join(part_categories, by=c("part_cat_id"="id"))
+
+
+```
+
+```{r}
+themes %>%
+  inner_join(themes, by = c("id" = "parent_id"), suffix = c("_parent", "_child"))
+```
 
