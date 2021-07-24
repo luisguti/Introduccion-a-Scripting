@@ -3,3 +3,52 @@ title: "Sesion 8"
 output: html_notebook
 ---
 
+```{r}
+library(tidyverse)
+library(dplyr)
+
+inventories <- read_csv('inventories.csv')
+inventory_parts <- read_csv('inventory_parts.csv')
+colors <- read_csv('colors.csv')
+
+inventories
+inventory_parts
+colors
+
+```
+```{r}
+inventory_parts_joined <- inventories %>% 
+  inner_join(inventory_parts, by = c("id" = "inventory_id")) %>%
+  dplyr::select(-id, -version) %>%
+  arrange(desc(quantity))
+
+inventory_parts_joined
+
+batmobile <- inventory_parts_joined %>% 
+  filter(set_num == "7784-1") %>%
+  dplyr::select(-set_num)
+
+batmobile
+
+batwing <- inventory_parts_joined %>% 
+  filter(set_num == "70916-1") %>%
+  dplyr::select(-set_num)
+
+batwing
+
+batmobile %>% 
+  inner_join(batwing, c("part_num", "color_id"), suffix = c("_batmobile","_batwing"))
+
+
+```
+```{r}
+parts %>%
+  inner_join(inventory_parts, by = "part_num")
+
+```
+```{r}
+sets %>%
+  inner_join(inventories, by = "set_num") %>%
+  inner_join(inventory_parts, by = c("id" = "inventory_id")) 
+```
+
