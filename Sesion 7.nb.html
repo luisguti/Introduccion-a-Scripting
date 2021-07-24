@@ -217,13 +217,68 @@ pre code {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFydF9jYXRlZ29yaWVzIDwtIHJlYWRfY3N2KCdwYXJ0X2NhdGVnb3JpZXMuY3N2JylcblxuYGBgIn0= -->
-<pre class="r"><code>part_categories &lt;- read_csv(&#39;part_categories.csv&#39;)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5cbmBgYCJ9 -->
+<pre class="r"><code>library(tidyverse)
 </code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuY29scyhcbiAgaWQgPSBjb2xfZG91YmxlKCksXG4gIG5hbWUgPSBjb2xfY2hhcmFjdGVyKClcbilcbiJ9 -->
+<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2RzIG92ZXJ3cml0dGVuIGJ5ICdkYnBseXInOlxuICBtZXRob2QgICAgICAgICBmcm9tXG4gIHByaW50LnRibF9sYXp5ICAgICBcbiAgcHJpbnQudGJsX3NxbCAgICAgIFxuLS0gQXR0YWNoaW5nIHBhY2thZ2VzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSB0aWR5dmVyc2UgMS4zLjEgLS1cbnYgZ2dwbG90MiAzLjMuNSAgICAgdiBwdXJyciAgIDAuMy40XG52IHRpYmJsZSAgMy4xLjIgICAgIHYgZHBseXIgICAxLjAuN1xudiB0aWR5ciAgIDEuMS4zICAgICB2IHN0cmluZ3IgMS40LjBcbnYgcmVhZHIgICAxLjQuMCAgICAgdiBmb3JjYXRzIDAuNS4xXG4tLSBDb25mbGljdHMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIHRpZHl2ZXJzZV9jb25mbGljdHMoKSAtLVxueCBkcGx5cjo6ZmlsdGVyKCkgbWFza3Mgc3RhdHM6OmZpbHRlcigpXG54IGRwbHlyOjpsYWcoKSAgICBtYXNrcyBzdGF0czo6bGFnKClcbiJ9 -->
+<pre><code>Registered S3 methods overwritten by &#39;dbplyr&#39;:
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+-- Attaching packages ------------------------------------------------------------------------------ tidyverse 1.3.1 --
+v ggplot2 3.3.5     v purrr   0.3.4
+v tibble  3.1.2     v dplyr   1.0.7
+v tidyr   1.1.3     v stringr 1.4.0
+v readr   1.4.0     v forcats 0.5.1
+-- Conflicts --------------------------------------------------------------------------------- tidyverse_conflicts() --
+x dplyr::filter() masks stats::filter()
+x dplyr::lag()    masks stats::lag()</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5dmVyc2UpXG5zZXRzIDwtIHJlYWRfY3N2KCdzZXRzLmNzdicpXG5gYGAifQ== -->
+<pre class="r"><code>library(tidyverse)
+sets &lt;- read_csv(&#39;sets.csv&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuY29scyhcbiAgc2V0X251bSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgbmFtZSA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgeWVhciA9IGNvbF9kb3VibGUoKSxcbiAgdGhlbWVfaWQgPSBjb2xfZG91YmxlKClcbilcbiJ9 -->
 <pre><code>
--- Column specification --------------------------------------------------------------------------------------------
+-- Column specification -----------------------------------------------------------------------------------------------
+cols(
+  set_num = col_character(),
+  name = col_character(),
+  year = col_double(),
+  theme_id = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGhlbWVzIDwtIHJlYWRfY3N2KCd0aGVtZXMuY3N2JylcbmBgYCJ9 -->
+<pre class="r"><code>themes &lt;- read_csv(&#39;themes.csv&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuY29scyhcbiAgaWQgPSBjb2xfZG91YmxlKCksXG4gIG5hbWUgPSBjb2xfY2hhcmFjdGVyKCksXG4gIHBhcmVudF9pZCA9IGNvbF9kb3VibGUoKVxuKVxuIn0= -->
+<pre><code>
+-- Column specification -----------------------------------------------------------------------------------------------
+cols(
+  id = col_double(),
+  name = col_character(),
+  parent_id = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFydHMgPC0gcmVhZF9jc3YoJ3BhcnRzLmNzdicpXG5gYGAifQ== -->
+<pre class="r"><code>parts &lt;- read_csv(&#39;parts.csv&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuY29scyhcbiAgcGFydF9udW0gPSBjb2xfY2hhcmFjdGVyKCksXG4gIG5hbWUgPSBjb2xfY2hhcmFjdGVyKCksXG4gIHBhcnRfY2F0X2lkID0gY29sX2RvdWJsZSgpXG4pXG4ifQ== -->
+<pre><code>
+-- Column specification -----------------------------------------------------------------------------------------------
+cols(
+  part_num = col_character(),
+  name = col_character(),
+  part_cat_id = col_double()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGFydF9jYXRlZ29yaWVzIDwtIHJlYWRfY3N2KCdwYXJ0X2NhdGVnb3JpZXMuY3N2JylcbmBgYCJ9 -->
+<pre class="r"><code>part_categories &lt;- read_csv(&#39;part_categories.csv&#39;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG4tLSBDb2x1bW4gc3BlY2lmaWNhdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuY29scyhcbiAgaWQgPSBjb2xfZG91YmxlKCksXG4gIG5hbWUgPSBjb2xfY2hhcmFjdGVyKClcbilcbiJ9 -->
+<pre><code>
+-- Column specification -----------------------------------------------------------------------------------------------
 cols(
   id = col_double(),
   name = col_character()
@@ -309,10 +364,22 @@ themes</code></pre>
 </div>
 <!-- rnb-frame-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudmlld19wYXJ0cyA8LSBwYXJ0cyAlPiUgXG4gIGlubmVyX2pvaW4ocGFydF9jYXRlZ29yaWVzLCBieSA9IGMoXCJwYXJ0X2NhdF9pZFwiKSwgc3VmZml4ID0gYyhcIl9wYXJ0c1wiLFwiX3BhcnRzX2NhdGVnb3JpZXNcIikpXG5cbmBgYCJ9 -->
+<pre class="r"><code>view_parts &lt;- parts %&gt;% 
+  inner_join(part_categories, by = c(&quot;part_cat_id&quot;), suffix = c(&quot;_parts&quot;,&quot;_parts_categories&quot;))
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3I6IEpvaW4gY29sdW1ucyBtdXN0IGJlIHByZXNlbnQgaW4gZGF0YS5cbnggUHJvYmxlbSB3aXRoIGBwYXJ0X2NhdF9pZGAuXG5SdW4gYHJsYW5nOjpsYXN0X2Vycm9yKClgIHRvIHNlZSB3aGVyZSB0aGUgZXJyb3Igb2NjdXJyZWQuXG4ifQ== -->
+<pre><code>Error: Join columns must be present in data.
+x Problem with `part_cat_id`.
+Run `rlang::last_error()` to see where the error occurred.</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlNlc2lvbiA3Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCg0Kc2V0cyA8LSByZWFkX2Nzdignc2V0cy5jc3YnKQ0KdGhlbWVzIDwtIHJlYWRfY3N2KCd0aGVtZXMuY3N2JykNCnBhcnRzIDwtIHJlYWRfY3N2KCdwYXJ0cy5jc3YnKQ0KcGFydF9jYXRlZ29yaWVzIDwtIHJlYWRfY3N2KCdwYXJ0X2NhdGVnb3JpZXMuY3N2JykNCg0KYGBgDQpgYGB7cn0NCg0KY291bnRpZXMgPC0gcmVhZF9jc3YoImNvdW50aWVzLmNzdiIpDQpjb3VudGllcw0KDQpjb3VudGllcyAlPiUNCiAgZHBseXI6OnNlbGVjdChzdGF0ZSwgY291bnR5LCBwb3B1bGF0aW9uLCBwcm9mZXNzaW9uYWw6cHJvZHVjdGlvbikNCg0KY291bnRpZXMgJT4lDQogIGRwbHlyOjpzZWxlY3Qoc3RhdGUsIGNvdW50eSwgcG9wdWxhdGlvbiwgZW5kc193aXRoKCJ3b3JrIiksIHN0YXJ0c193aXRoKCJpbmNvbWUiKSkNCg0KYGBgDQoqKlRoZSByZW5hbWUgdmVyYioqDQoNCmBgYHtyfQ0KDQpjb3VudGllcyAlPiUNCiAgY291bnQoc3RhdGUpICU+JQ0KICByZW5hbWUobnVtX2NvdW50aWVzID0gbikNCg0KY291bnRpZXMgJT4lDQogIGRwbHlyOjpzZWxlY3Qoc3RhdGUsIGNvdW50eSwgcG92ZXJ0eV9yYXRlID0gcG92ZXJ0eSkNCmBgYA0KDQoNCioqVXNpbmcgdHJhbnNtdXRlKioNCg0KYGBge3J9DQpjb3VudGllcyAlPiUNCiAgdHJhbnNtdXRlKHN0YXRlLCBjb3VudHksIHBvcHVsYXRpb24sIGRlbnNpdHk9cG9wdWxhdGlvbi9sYW5kX2FyZWEpICU+JQ0KICBmaWx0ZXIocG9wdWxhdGlvbiA+IDEwMDAwMDApICU+JQ0KICBhcnJhbmdlKGRlbnNpdHkpDQpgYGANCg0KYGBge3J9DQpjb3VudGllcyAlPiUNCiAgcmVuYW1lKHVuZW1wbG95bWVudF9yYXRlID0gdW5lbXBsb3ltZW50KQ0KDQpjb3VudGllcyAlPiUNCiAgZHBseXI6OnNlbGVjdChzdGF0ZSwgY291bnR5LCBjb250YWlucygicG92ZXJ0eSIpKQ0KYGBgDQoNCg0KKipKb2luaW5nIERhdGEgV2l0aCBkcGx5cioqDQoNCmBgYHtyfQ0KDQp2aWV3KHNldHMpDQoNCnNldHMNCnRoZW1lcw0KDQoNCg0KYGBgDQoNCmBgYHtyfQ0Kc2V0cyAlPiUgDQogIGlubmVyX2pvaW4odGhlbWVzLCBieT1jKCJ0aGVtZV9pZCIgPSAiaWQiKSkNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlNlc2lvbiA3Ig0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KYGBge3J9DQpsaWJyYXJ5KHRpZHl2ZXJzZSkNCg0KDQpzZXRzIDwtIHJlYWRfY3N2KCdzZXRzLmNzdicpDQp0aGVtZXMgPC0gcmVhZF9jc3YoJ3RoZW1lcy5jc3YnKQ0KcGFydHMgPC0gcmVhZF9jc3YoJ3BhcnRzLmNzdicpDQpwYXJ0X2NhdGVnb3JpZXMgPC0gcmVhZF9jc3YoJ3BhcnRfY2F0ZWdvcmllcy5jc3YnKQ0KDQpgYGANCmBgYHtyfQ0KDQpjb3VudGllcyA8LSByZWFkX2NzdigiY291bnRpZXMuY3N2IikNCmNvdW50aWVzDQoNCmNvdW50aWVzICU+JQ0KICBkcGx5cjo6c2VsZWN0KHN0YXRlLCBjb3VudHksIHBvcHVsYXRpb24sIHByb2Zlc3Npb25hbDpwcm9kdWN0aW9uKQ0KDQpjb3VudGllcyAlPiUNCiAgZHBseXI6OnNlbGVjdChzdGF0ZSwgY291bnR5LCBwb3B1bGF0aW9uLCBlbmRzX3dpdGgoIndvcmsiKSwgc3RhcnRzX3dpdGgoImluY29tZSIpKQ0KDQpgYGANCioqVGhlIHJlbmFtZSB2ZXJiKioNCg0KYGBge3J9DQoNCmNvdW50aWVzICU+JQ0KICBjb3VudChzdGF0ZSkgJT4lDQogIHJlbmFtZShudW1fY291bnRpZXMgPSBuKQ0KDQpjb3VudGllcyAlPiUNCiAgZHBseXI6OnNlbGVjdChzdGF0ZSwgY291bnR5LCBwb3ZlcnR5X3JhdGUgPSBwb3ZlcnR5KQ0KYGBgDQoNCg0KKipVc2luZyB0cmFuc211dGUqKg0KDQpgYGB7cn0NCmNvdW50aWVzICU+JQ0KICB0cmFuc211dGUoc3RhdGUsIGNvdW50eSwgcG9wdWxhdGlvbiwgZGVuc2l0eT1wb3B1bGF0aW9uL2xhbmRfYXJlYSkgJT4lDQogIGZpbHRlcihwb3B1bGF0aW9uID4gMTAwMDAwMCkgJT4lDQogIGFycmFuZ2UoZGVuc2l0eSkNCmBgYA0KDQpgYGB7cn0NCmNvdW50aWVzICU+JQ0KICByZW5hbWUodW5lbXBsb3ltZW50X3JhdGUgPSB1bmVtcGxveW1lbnQpDQoNCmNvdW50aWVzICU+JQ0KICBkcGx5cjo6c2VsZWN0KHN0YXRlLCBjb3VudHksIGNvbnRhaW5zKCJwb3ZlcnR5IikpDQpgYGANCg0KDQoqKkpvaW5pbmcgRGF0YSBXaXRoIGRwbHlyKioNCg0KYGBge3J9DQoNCnZpZXcoc2V0cykNCg0Kc2V0cw0KdGhlbWVzDQoNCg0KDQpgYGANCg0KYGBge3J9DQpzZXRzICU+JSANCiAgaW5uZXJfam9pbih0aGVtZXMsIGJ5PWMoInRoZW1lX2lkIiA9ICJpZCIpKQ0KYGBgDQpgYGB7cn0NCnZpZXcocGFydHMpDQp2aWV3KHBhcnRfY2F0ZWdvcmllcykNCg0Kdmlld19wYXJ0cyA8LSBwYXJ0cyAlPiUNCiAgaW5uZXJfam9pbihwYXJ0X2NhdGVnb3JpZXMsIGJ5ID0gYygicGFydF9jYXRfaWQiID0gImlkIikpDQogIA0Kdmlldyh2aWV3X3BhcnRzKQ0KDQp2aWV3X3BhcnRzIDwtIHBhcnRzICU+JSANCiAgaW5uZXJfam9pbihwYXJ0X2NhdGVnb3JpZXMsIGJ5ID0gYygicGFydF9jYXRfaWQiKSwgc3VmZml4ID0gYygiX3BhcnRzIiwiX3BhcnRzX2NhdGVnb3JpZXMiKSkNCg0Kdmlldyh2aWV3X3BhcnRzKQ0KDQpgYGANCg0K</div>
 
 
 
